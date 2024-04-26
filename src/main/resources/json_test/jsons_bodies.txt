@@ -1,0 +1,27 @@
+{
+    "name": "Smartphone",
+    "type": "Mobile",
+    "manufacturer": "Samsung",
+    "model": "Galaxy S20",
+    "serialNumber": "S20-123456789"
+}
+
+
+
+{
+    "name": "Ethernet",
+    "macAddress": "00:1A:2B:3C:4D:5E",
+    "ipv4Address": "192.168.1.10",
+    "ipv6Address": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+    "gatewayAddress": "192.168.1.1",
+    "deviceId": 1
+}
+
+
+
+{
+    "id": 1,
+    "name": "Block Social Media",
+    "description": "Prevent access to social media websites during work hours",
+    "action": "Deny"
+}
