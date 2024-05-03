@@ -12,6 +12,7 @@ import java.sql.SQLException;
 
 public class DatabaseUtils {
 
+    private static final String SELECT_QUERY = "SELECT * FROM %s ORDER BY id ASC;";
     /**
      * Generates a SELECT query to retrieve all rows from a table corresponding to the specified entity class.
      *
@@ -23,7 +24,7 @@ public class DatabaseUtils {
     public static <T> String generateSelectAllQuery(Class<T> entityClass) throws SQLException {
         try {
             T entity = entityClass.getDeclaredConstructor().newInstance();
-            return "SELECT * FROM " + DatabaseUtils.getTableName(entity.getClass()) + " ORDER BY id ASC;";
+            return String.format(SELECT_QUERY, DatabaseUtils.getTableName(entity.getClass()));
         }catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new SQLException("Error generate select query", e);
         }
