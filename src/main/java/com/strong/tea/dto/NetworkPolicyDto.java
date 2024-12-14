@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class NetworkPolicyDto {
     private long network_interface_id;
-    private String policy_name;
+    private String policy_name; // хорошей практикой считается использование CamelCase
     private String network_interface_name;
     private String policy_description;
     private String policy_action;

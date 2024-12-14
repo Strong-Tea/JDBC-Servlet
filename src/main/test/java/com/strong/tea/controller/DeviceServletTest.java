@@ -22,17 +22,17 @@ import static org.mockito.Mockito.*;
 class DeviceServletTest {
 
     @Test
-    public void testDoPost() throws Exception {
+    void testDoPost() throws Exception {
         HttpServletRequest request = mock(HttpServletRequest.class);
         HttpServletResponse response = mock(HttpServletResponse.class);
 
         String jsonDevice = """
-            {\"id\":1,
-            \"name\":\"TestDevice\",
-            \"type\":\"TestType\",
-            \"manufacturer\":\"TestManufacturer\",
-            \"model\":\"TestModel\",
-            \"serialNumber\":\"TestSerial\"}""
+            {"id":1,
+            "name":"TestDevice",
+            "type":"TestType",
+            "manufacturer":"TestManufacturer",
+            "model":"TestModel",
+            "serialNumber":"TestSerial"}""
             """;
         BufferedReader reader = new BufferedReader(new StringReader(jsonDevice));
         when(request.getReader()).thenReturn(reader);
